@@ -104,9 +104,9 @@ void setup() {
 }
 
 void loop() {
-  AllPixels();
-  TextDisplay();
-  InvertedTextDisplay();
+  //AllPixels();
+  MichaelDisplay();
+  InvertedMichaelDisplay();
   //ScrollText();
   DisplayChars();
   TextSize();
@@ -116,7 +116,7 @@ void loop() {
   DrawFilledRoundRectangle();
   DrawCircle();
   DrawFilledCircle();
-  DrawBigCircle();
+  //DrawBigCircle();
   DrawTriangle();
   DrawFilledTriangle();
 }
@@ -147,6 +147,31 @@ void AllPixels()
       delay(30);
     }
   
+}
+
+void MichaelDisplay()
+{
+  display.clearDisplay();
+  display.setTextSize(2);
+  display.setTextColor(SH110X_WHITE);
+  display.setCursor(5,28);
+  display.println("Michael");
+  display.setCursor(10, 48);
+  display.println("Alex");
+  display.display();
+  delay(3000);
+}
+
+void InvertedMichaelDisplay()
+{
+  display.clearDisplay();
+  display.setTextColor(SH110X_BLACK, SH110X_WHITE);
+  display.setCursor(5,28);
+  display.println("Michael");
+  display.setCursor(10,48);
+  display.println("Alex");
+  display.display();
+  delay(3000);
 }
 
 void TextDisplay()
