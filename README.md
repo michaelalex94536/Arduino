@@ -1,6 +1,6 @@
 ##  Arduino projects (mostly)
 
-####  Never was much of an Arduino fan, but it is the fastest way to go if you want to play with a new sensor.  (Once I get familiar with the sensor, I'll move the project to something like an STM32 microcontroller.)  While Arduino libraries are nice and get you up to speed quickly, so much stuff taht I would like to be aware of gets hidden in them.  For example, what's the I2C address, what pins is the SPI using, what is the SPI clock rate, etc?  As time goes on, I plan to move as much as possible from the Arduino IDE to VS Code with the PlatformIO plug-in.  
+####  Never was much of an Arduino fan, but it is the fastest way to go if you want to play with a new sensor.  (Once I get familiar with the sensor, I'll move the project to something like an STM32 microcontroller.)  While Arduino libraries are nice and get you up to speed quickly, so much stuff that I would like to be aware of gets hidden in them.  For example, what's the I2C address, what pins is the SPI using, what is the SPI clock rate, etc?  As time goes on, I plan to move as much as possible from the Arduino IDE to VS Code with the PlatformIO plug-in.  
 
 ###  BNO055-related projects
 
