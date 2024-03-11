@@ -9,7 +9,7 @@
 #define OLED_MOSI   23
 #define OLED_CLK    18
 #define OLED_DC     16
-#define OLED_CS     15  //5
+#define OLED_CS     5
 #define OLED_RESET  17
 
 Adafruit_SH1107 display(SCREEN_WIDTH, SCREEN_HEIGHT,
@@ -106,21 +106,19 @@ void setup() {
 void loop() {
   //AllPixels();
   MichaelDisplay();
-  /*
-  //InvertedMichaelDisplay();
+  InvertedMichaelDisplay();
   //ScrollText();
-  //DisplayChars();
-  //TextSize();
-  //DrawRectangle();
-  //DrawFilledRectangle();
-  //DrawRoundRectangle();
+  DisplayChars();
+  TextSize();
+  DrawRectangle();
+  DrawFilledRectangle();
+  DrawRoundRectangle();
   DrawFilledRoundRectangle();
   DrawCircle();
   DrawFilledCircle();
   //DrawBigCircle();
   DrawTriangle();
   DrawFilledTriangle();
-  */
 }
 
 
@@ -154,34 +152,14 @@ void AllPixels()
 void MichaelDisplay()
 {
   display.clearDisplay();
-
-  display.setTextSize(1);
-  display.setTextColor(SH110X_WHITE);
-  display.setCursor(17,18);
-  display.println("Temperature [C/F]");
   display.setTextSize(2);
-  display.setCursor(24, 28);
-  display.println("0.0/32.0");
-
-  display.setTextSize(1);
   display.setTextColor(SH110X_WHITE);
-  display.setCursor(24,58);
-  display.println("Humidity [%]");
-  display.setTextSize(2);
-  display.setCursor(32, 68);
-  display.println("50.0");
-
-
-  display.setTextSize(1);
-  display.setTextColor(SH110X_WHITE);
-  display.setCursor(24,98);
-  display.println("Pressure [%]");
-  display.setTextSize(2);
-  display.setCursor(26, 108);
-  display.println("1013.25");
-
+  display.setCursor(5,28);
+  display.println("Michael");
+  display.setCursor(10, 48);
+  display.println("Alex");
   display.display();
-  delay(1000);
+  delay(3000);
 }
 
 void InvertedMichaelDisplay()

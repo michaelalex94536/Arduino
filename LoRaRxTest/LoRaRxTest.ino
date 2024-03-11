@@ -9,15 +9,13 @@
 #include <SPI.h>
 #include <RH_RF95.h>
 
-// Here is the signal wiring between the RFM9x module and the Mega. These pins need to be explicitly defined. 
-#define RFM95_CS 4   //  RFM9x CS <---> Mega digital pin 4
-#define RFM95_RST 2  // RFM9x RST <---> Mega digital pin 2
-#define RFM95_INT 3  //  RFM9x G0 <---> Mega digital pin 3
+#define RFM95_CS 4
+#define RFM95_RST 2
+#define RFM95_INT 3
 
-// Here is the SPI wiring between the RFM9x module and the Mega. These pins DO NOT need to be explicitly defined.
-// RFM9x  SCK <---> Mega digital pin 52
-// RFM9x MISO <---> Mega digital pin 50
-// RFM9x MOSI <---> Mega digital pin 51
+// SPI CLK:  Mega digital pin 52
+// SPI MISO: Mega digital pin 50
+// SPI MOSI: Mega digital pin 51
 
 // Change to 434.0 or other frequency, must match RX's freq!
 #define RF95_FREQ 915.0

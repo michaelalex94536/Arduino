@@ -1,7 +1,4 @@
-//
 // LoRa 9x_TX on the UNO
-// The wiring here is Arduin Uno specific!!!!!  
-//
 // -*- mode: C++ -*-
 // Example sketch showing how to create a simple messaging client (transmitter)
 // with the RH_RF95 class. RH_RF95 class does not provide for addressing or
@@ -12,16 +9,13 @@
 #include <SPI.h>
 #include <RH_RF95.h>
 
+#define RFM95_CS  4  // Uno digital pin
+#define RFM95_RST 2  // Uno digital pin
+#define RFM95_INT 3  // Uno digital pin
 
-// Here is the signal wiring between the RFM9x module and the Uno. These pins need to be explicitly defined. 
-#define RFM95_CS  4  //  RFM9x CS <---> Uno digital pin 4
-#define RFM95_RST 2  // RFM9x RST <---> Uno digital pin 2 
-#define RFM95_INT 3  //  RFM9x G0 <---> Uno digital pin 3 
-
-// Here is the SPI wiring between the RFM9x module and the Uno. These pins DO NOT need to be explicitly defined. 
-// RFM9x  SCK <---> Uno digital pin 13
-// RFM9x MISO <---> Uno digital pin 12
-// RFM9x MOSI <---> Uno digital pin 11 
+// SPI CLK:  Uno digital pin 13
+// SPI MISO: Uno digital pin 12
+// SPI MOSI: Uno digital pin 11 
 // Change to 434.0 or other frequency, must match RX's freq!
 #define RF95_FREQ 915.0
 
@@ -30,7 +24,6 @@ RH_RF95 rf95(RFM95_CS, RFM95_INT);
 
 void setup() 
 {
-  // Set the RFM9x reset pin high
   pinMode(RFM95_RST, OUTPUT);
   digitalWrite(RFM95_RST, HIGH);
 

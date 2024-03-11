@@ -1,5 +1,3 @@
-
-
 /***************************************************************************
   This is a library for the BME280 humidity, temperature & pressure sensor
 
