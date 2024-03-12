@@ -23,10 +23,10 @@ const int irqPin = 3;    // LoRa module interrupt (G0) pin. Must be arduin HW in
 // Message counter
 byte msgCount = 0;
 
+
 // Variables for the momentary pushbutton on Pin 8.
 int buttonPin = 8;
-int TxButtonState; // Button pressed or not? 
-
+int TxButtonState;
 
 void setup() {
   Serial.begin(9600); 
