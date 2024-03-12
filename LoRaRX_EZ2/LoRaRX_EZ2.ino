@@ -8,7 +8,7 @@ the message the Tx side of things is sending!
 
 There is a pushbutton between Uno Pin 8 and ground. 
 
-There is an LED between Uno Pin 5 and ground. 
+There is an LED and resistor between Uno Pin 5 and ground. 
 
 Hardware: Arduino Uno and Adafruit 915MHz RFM9x module.  
 
@@ -22,7 +22,19 @@ const int csPin = 4;     // LoRa module chip select
 const int rstPin = 2;    // LoRa module reset pin
 const int irqPin = 3;    // LoRa module interrupt (G0) pin. Must be arduin HW interrupt pin
 
-// LED connection
+
+/* We use the Uno software SPI pins
+ LoRa module  SCK Pin <---> Uno Pin 13
+ LoRa module MISO Pin <---> Uno Pin 12
+ LoRa module MOSI Pin <---> Uno Pin 11
+
+There is a pushbutton between Uno Pin 8 and ground
+ Pushbutton <---> Uno Pin 8
+
+*/
+
+
+// LED - 330 Ohm resistor connection
 const int ledPin = 5;
 
 // Receive message variables
