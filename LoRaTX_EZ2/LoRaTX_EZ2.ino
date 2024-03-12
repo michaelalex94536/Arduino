@@ -8,7 +8,7 @@ Hardware: Arduino Uno and Adafruit 915MHz RFM9x module.
 
 There is a pushbutton between Uno Pin 8 and ground. 
 
-There is an LED band resistor etween Uno Pin 5 and ground. 
+There is an LED and resistor between Uno Pin 5 and ground. 
 
 */
 
@@ -18,7 +18,7 @@ There is an LED band resistor etween Uno Pin 5 and ground.
 // Here are the LoRa module pins <---> Uno pins
 const int csPin = 4;     // LoRa module chip select
 const int rstPin = 2;    // LoRa module reset pin
-const int irqPin = 3;    // LoRa module interrupt// LED connection (G0) pin. Must be arduin HW interrupt pin
+const int irqPin = 3;    // LoRa module interrupt (G0) pin. Must be arduin HW interrupt pin due to the library beung used. 
 
 /* We use the Uno software SPI pins
  LoRa module  SCK Pin <---> Uno Pin 13
